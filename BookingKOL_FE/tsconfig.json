@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",             // hoặc ES2020
+    "module": "ESNext",             // ⚡ bắt buộc
+    "moduleResolution": "Node",     // hoặc "Bundler" nếu bạn dùng Vite 5
+    "types": ["vite/client"],
+    "jsx": "react-jsx",             // nếu bạn dùng React 18+
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}

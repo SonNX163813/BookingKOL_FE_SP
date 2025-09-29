@@ -1,4 +1,5 @@
 import React from "react";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -6,6 +7,8 @@ import "./App.css";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+
+const queryClient = new QueryClient();
 
 const theme = createTheme({
   palette: { mode: "light" },
@@ -16,8 +19,10 @@ const theme = createTheme({
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ThemeProvider theme={theme}>
-    {/* <CssBaseline /> */}
-    <App />
-  </ThemeProvider>
+  <QueryClientProvider client={queryClient}>
+    <ThemeProvider theme={theme}>
+      {/* <CssBaseline /> */}
+      <App />
+    </ThemeProvider>
+  </QueryClientProvider>
 );

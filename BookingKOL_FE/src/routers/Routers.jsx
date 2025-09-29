@@ -11,6 +11,8 @@ import UserProfile from "../pages/home/userProfileDetail/UserProflie";
 
 // import Infomation from "../pages/profile/owner/infomation";
 // import About from "../pages/About";
+import RankingPage from "../pages/rank/RankingPage";
+import ChatAIPage from "../pages/ai/ChatAIPage";
 
 const Routers = () => {
   return (
@@ -25,6 +27,8 @@ const Routers = () => {
       <Route path="/userprofile" element={<UserProfile />} />
       {/* <Route path="/infomation" element={<Infomation />} />
       <Route path="/about" element={<About />} /> */}
+      <Route path="/ranking" element={<RankingPage />} />
+      <Route path="/chat-AI" element={<ChatAIPage />} />
     </Routes>
   );
 };
