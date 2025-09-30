@@ -7,6 +7,7 @@ import "./App.css";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -19,10 +20,12 @@ const theme = createTheme({
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider theme={theme}>
-      {/* <CssBaseline /> */}
-      <App />
-    </ThemeProvider>
-  </QueryClientProvider>
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        {/* <CssBaseline /> */}
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
+  </BrowserRouter>
 );
