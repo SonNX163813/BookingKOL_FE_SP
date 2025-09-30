@@ -1,4 +1,4 @@
-import { post } from "../config/axios-config"
+import { post, get } from "../config/axios-config"
 import { API_PATHS } from "../constants/apiPath"
 
 export const postCallSendAI = async ({
@@ -9,5 +9,11 @@ export const postCallSendAI = async ({
         data: {
             question
         }
+    })
+}
+
+export const getLogChatAI = async () => {
+    return await get({
+        url: API_PATHS.AI.getLogChat
     })
 }
